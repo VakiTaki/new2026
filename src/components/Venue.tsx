@@ -36,7 +36,7 @@ export function Venue() {
           className="card image-card"
           style={{
             background:
-              "url('assets/vhod.webp') center/cover no-repeat, var(--card)",
+              "url('/assets/vhod.webp') center/cover no-repeat, var(--card)",
           }}
         >
           {/* <div

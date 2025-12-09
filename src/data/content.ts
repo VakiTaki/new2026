@@ -1,7 +1,7 @@
 export const EVENT_TIMESTAMP = new Date("2025-12-25T17:00:00+03:00").getTime();
 export const EVENT_DATE_TEXT = "25 декабря 2025 · 17:00";
 
-const asset = (name: string) => `assets/${name}`;
+const asset = (name: string) => `/assets/${name}`;
 
 export const galleryItems = [
   {
