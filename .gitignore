@@ -1,0 +1,11 @@
+.next
+node_modules
+.turbo
+.vercel
+dist
+.vite
+*.log
+out
+coverage
+*.local
+.DS_Store
