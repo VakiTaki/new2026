@@ -53,7 +53,7 @@ header.hero {
       rgba(82, 8, 18, 0.9),
       rgba(11, 26, 42, 0.92)
     ),
-    url("assets/warm-red-2026.jpg") 80% 45% / cover no-repeat;
+    url("/assets/warm-red-2026.jpg") 80% 45% / cover no-repeat;
   min-height: 75vh;
   display: flex;
   align-items: stretch;
@@ -350,7 +350,7 @@ ul.list li::before {
       rgba(82, 8, 18, 0.85),
       rgba(11, 26, 42, 0.9)
     ),
-    url("assets/candle-silver.jpg") center/cover no-repeat;
+    url("/assets/candle-silver.jpg") center/cover no-repeat;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   min-height: 280px;
@@ -373,7 +373,7 @@ ul.list li::before {
 
 .map__frame.has-map {
   aspect-ratio: 1 / 1;
-  background: url("assets/map.png") center/cover no-repeat, #0d1826;
+  background: url("/assets/map.png") center/cover no-repeat, #0d1826;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
