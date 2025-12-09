@@ -17,10 +17,43 @@ export function MapBlock() {
             <li>Метро: ближайшие станция — Улица 1905 года</li>
             <li>Парковка: ориентируемся на свободные места поблизости</li>
           </ul>
-          {/* <div className="pill" style={{ marginTop: "12px" }}>
-            <span className="dot" aria-hidden="true" />
-            <span>Сохраните точку заранее в навигаторе</span>
-          </div> */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              marginTop: "30px",
+            }}
+          >
+            <div
+              className="pill pill-mobile"
+              style={{ marginTop: "12px", cursor: "pointer" }}
+            >
+              <span className="dot" aria-hidden="true" />
+              <span
+                onClick={() => {
+                  window.location.href =
+                    "yandexmaps://maps.yandex.ru/?pt=37.557816,55.762237&z=17&l=map";
+                }}
+              >
+                Открыть в приложении
+              </span>
+            </div>
+            <div
+              className="pill pill-desktop"
+              style={{ marginTop: "12px", cursor: "pointer" }}
+            >
+              <span className="dot" aria-hidden="true" />
+
+              <a
+                target="_blank"
+                href="https://yandex.ru/maps/org/lambic_collection/68448441158/?indoorLevel=1&ll=37.557816%2C55.762237&z=17.65"
+              >
+                Посмотреть на карте
+              </a>
+            </div>
+          </div>
         </div>
         <div
           className="map__frame has-map"

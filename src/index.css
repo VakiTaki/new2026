@@ -168,6 +168,9 @@ h1 {
 }
 
 .btn.primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(120deg, var(--gold), var(--frost-gold));
   color: #1b1b1b;
   box-shadow: 0 12px 36px rgba(209, 163, 84, 0.35);
@@ -179,6 +182,9 @@ h1 {
 }
 
 .btn.ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-color: rgba(255, 255, 255, 0.22);
   color: #fff;
   background: rgba(255, 255, 255, 0.06);
@@ -380,6 +386,24 @@ footer {
   padding: 18px 0 12px;
   color: var(--muted);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pill-mobile {
+  display: none;
+}
+
+.pill-desktop {
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .pill-mobile {
+    display: inline-flex;
+  }
+
+  .pill-desktop {
+    display: none;
+  }
 }
 
 .countdown {
