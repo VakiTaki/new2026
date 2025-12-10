@@ -6,7 +6,7 @@
   --snow: #f7fbff;
   --gold: #d1a354;
   --frost-gold: #e4c892;
-  --card: rgba(12, 24, 37, 0.6);
+  --card: #2a3b56;
   --glass: rgba(255, 255, 255, 0.08);
   --text: #edf2f7;
   --muted: #cbd5e1;
@@ -263,11 +263,12 @@ section {
   content: "";
   position: absolute;
   inset: -1px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     145deg,
     rgba(11, 26, 42, 0.28),
     rgba(82, 8, 18, 0.28)
-  );
+  ); */
+  border: ;
   pointer-events: none;
   z-index: 0;
 }
