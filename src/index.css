@@ -288,6 +288,7 @@ section {
 .timeline-item {
   position: relative;
   padding-left: 18px;
+  overflow: visible;
 }
 
 .timeline-item::before {
@@ -300,6 +301,7 @@ section {
   border-radius: 50%;
   background: var(--gold);
   box-shadow: 0 0 0 10px rgba(209, 163, 84, 0.14);
+  z-index: 2;
 }
 
 ul.list {

@@ -126,7 +126,7 @@ export default function Registration() {
   };
 
   useEffect(() => {
-    console.log(token);
+    // console.log(token);
     if (token) {
       fetchInfo({ token });
     }
