@@ -11,7 +11,7 @@ export const galleryItems = [
   },
   {
     label: "",
-    path: asset("gosti.png"),
+    path: asset("eve-2026.jpg"),
     fallback: "linear-gradient(145deg, #5b0c18, #210712)",
   },
   {

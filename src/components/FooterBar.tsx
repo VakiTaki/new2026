@@ -1,11 +1,28 @@
-import React from 'react';
+import { scrollToId } from "../utils";
+import React from "react";
 
 export function FooterBar() {
   return (
     <footer>
       <div className="section-header" style={{ marginBottom: 0 }}>
-        <p style={{ margin: 0, color: '#f7fbff' }}>Готовы к встрече 25 декабря — увидимся в Lambic Collection.</p>
-        <a className="btn ghost" href="#top">
+        <p
+          style={{
+            margin: 0,
+            color: "#f7fbff",
+            fontSize: "24px",
+            fontWeight: "bolder",
+          }}
+        >
+          Готовы к встрече 25 декабря — увидимся в Lambic Collection.
+        </p>
+        <a
+          className="btn ghost"
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToId("top");
+          }}
+        >
           Наверх
         </a>
       </div>

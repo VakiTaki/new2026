@@ -1,5 +1,6 @@
 import React from "react";
 import { Countdown } from "./Countdown";
+import { scrollToId } from "../utils";
 
 export function Hero() {
   return (
@@ -13,15 +14,39 @@ export function Hero() {
         </p>
         <div className="pill">
           <span className="dot" aria-hidden="true" />
-          <span>Дресс-код: аккуратный и стильный casual</span>
+          <span>Дресс-код:casual</span>
         </div>
         <Countdown />
         <div className="cta-row">
-          <a className="btn primary" href="#map">
+          <a
+            className="btn primary"
+            href="#map"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToId("map");
+            }}
+          >
             Как добраться
           </a>
-          <a className="btn ghost" href="#venue">
+          <a
+            className="btn ghost"
+            href="#venue"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToId("venue");
+            }}
+          >
             О ресторане
+          </a>
+          <a
+            className="btn primary"
+            href="#registration"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToId("registration");
+            }}
+          >
+            Регистрация
           </a>
         </div>
       </div>
