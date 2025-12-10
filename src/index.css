@@ -444,6 +444,7 @@ footer {
 
 .registration__empty {
   text-align: center;
+  padding: 24px;
 }
 
 .registration__empty h3 {

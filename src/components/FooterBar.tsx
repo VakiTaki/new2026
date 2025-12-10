@@ -13,7 +13,7 @@ export function FooterBar() {
             fontWeight: "bolder",
           }}
         >
-          Готовы к встрече 25 декабря — увидимся в Lambic Collection.
+          Готовы к встрече 25 декабря? Увидимся в Lambic Collection!
         </p>
         <a
           className="btn ghost"

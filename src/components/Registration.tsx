@@ -14,7 +14,7 @@ const formatName = (name?: string) => name || "Гость";
 
 const TokenlessNotice = () => (
   <div className="registration__empty">
-    <h3>Предварительная регистрация</h3>
+    <h3></h3>
     <p style={{ marginBottom: "0px" }}>
       Перейдите по персональной ссылке из пригласительного письма, чтобы
       подтвердить участие.
