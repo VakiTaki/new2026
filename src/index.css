@@ -440,7 +440,6 @@ footer {
   display: grid;
   gap: 16px;
   padding: 24px;
-  margin: 24px;
 }
 
 .registration__empty {
