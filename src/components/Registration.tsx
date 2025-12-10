@@ -51,7 +51,7 @@ const CompletedCard = ({
   <div className="registration__card">
     {user.participation ? (
       <>
-        <h3>Ваш QR-код для входа</h3>
+        <h3>Ваш QR-код</h3>
         <p className="registration__name">{formatName(user.fullname)}</p>
         {user.qr ? (
           <div className="qr-box">
@@ -86,7 +86,7 @@ const PendingCard = ({
   onNo: (body: { token?: string }) => void;
 }) => (
   <div className="registration__card">
-    <h3>Предварительная регистрация</h3>
+    {/* <h3>Здравствуйте, </h3> */}
     <p className="registration__name">{formatName(user.fullname)}</p>
     <AnswerButtons token={user.token} onYes={onYes} onNo={onNo} />
   </div>
@@ -115,45 +115,59 @@ export default function Registration() {
     }
   }, []);
 
-  const fetchInfo = (body: { token?: string | null }) => {
+  const fetchInfo = async (
+    body: { token?: string | null },
+    withLoader = true
+  ) => {
     if (!body.token) return;
-    setLoading(true);
+    if (withLoader) setLoading(true);
     setError(null);
-    getAuthInfo(body)
-      .then((res) => setUser(res))
-      .catch(() => setError("Не удалось получить данные. Попробуйте позже."))
-      .finally(() => setLoading(false));
+    try {
+      const res = await getAuthInfo(body);
+      setUser(res);
+    } catch (err) {
+      setError("Не удалось получить данные. Попробуйте позже.");
+    } finally {
+      if (withLoader) setLoading(false);
+    }
   };
 
   useEffect(() => {
-    // console.log(token);
     if (token) {
       fetchInfo({ token });
     }
   }, [token]);
 
-  const handleYes = (body: { token?: string }) => {
+  const handleYes = async (body: { token?: string }) => {
     if (!body.token) return;
     setLoading(true);
     setError(null);
-    yesAnswer(body)
-      .then((res) => {
-        if (res === 200) fetchInfo(body);
-      })
-      .catch(() => setError("Не удалось обновить статус. Попробуйте снова."))
-      .finally(() => setLoading(false));
+    try {
+      const res = await yesAnswer(body);
+      if (res === 200) {
+        await fetchInfo(body, false);
+      }
+    } catch (err) {
+      setError("Не удалось обновить статус. Попробуйте снова.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleNo = (body: { token?: string }) => {
+  const handleNo = async (body: { token?: string }) => {
     if (!body.token) return;
     setLoading(true);
     setError(null);
-    noAnswer(body)
-      .then((res) => {
-        if (res === 200) fetchInfo(body);
-      })
-      .catch(() => setError("Не удалось обновить статус. Попробуйте снова."))
-      .finally(() => setLoading(false));
+    try {
+      const res = await noAnswer(body);
+      if (res === 200) {
+        await fetchInfo(body, false);
+      }
+    } catch (err) {
+      setError("Не удалось обновить статус. Попробуйте снова.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
