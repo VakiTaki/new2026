@@ -9,8 +9,9 @@ export function FooterBar() {
           style={{
             margin: 0,
             color: "#f7fbff",
-            fontSize: "24px",
+            fontSize: "30px",
             fontWeight: "bolder",
+            fontFamily: "var(--font-serif)",
           }}
         >
           Готовы к встрече 25 декабря? Увидимся в Lambic Collection!

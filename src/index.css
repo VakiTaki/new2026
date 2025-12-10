@@ -612,6 +612,12 @@ footer {
 
   header.hero {
     min-height: 80vh;
+    background: linear-gradient(
+        135deg,
+        rgba(82, 8, 18, 0.9),
+        rgba(11, 26, 42, 0.92)
+      ),
+      url("/assets/warm-red-2026.jpg") top/ 130% no-repeat;
   }
 
   .eyebrow {
