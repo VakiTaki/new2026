@@ -36,7 +36,7 @@ export function Hero() {
               scrollToId("venue");
             }}
           >
-            О ресторане
+            Место встречи
           </a>
           <a
             className="btn primary"

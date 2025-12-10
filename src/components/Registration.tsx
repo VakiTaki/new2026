@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { getAuthInfo, noAnswer, yesAnswer } from "../services/apiService";
+import { scrollToId } from "../utils";
 
 type UserInfo = {
   fullname?: string;
@@ -169,6 +170,12 @@ export default function Registration() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (user && user.completed) {
+      scrollToId("registration");
+    }
+  }, [user]);
 
   return (
     <section id="registration" className="registration">
