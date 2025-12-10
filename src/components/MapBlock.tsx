@@ -1,3 +1,4 @@
+import { Map } from "lucide-react";
 import React from "react";
 
 export function MapBlock() {
@@ -30,7 +31,8 @@ export function MapBlock() {
               className="pill pill-mobile"
               style={{ marginTop: "12px", cursor: "pointer" }}
             >
-              <span className="dot" aria-hidden="true" />
+              {/* <span className="dot" aria-hidden="true" /> */}
+              <Map />
               <span
                 onClick={() => {
                   window.location.href =
@@ -44,13 +46,14 @@ export function MapBlock() {
               className="pill pill-desktop"
               style={{ marginTop: "12px", cursor: "pointer" }}
             >
-              <span className="dot" aria-hidden="true" />
+              {/* <span className="dot" aria-hidden="true" /> */}
+              <Map />
 
               <a
                 target="_blank"
                 href="https://yandex.ru/maps/org/lambic_collection/68448441158/?indoorLevel=1&ll=37.557816%2C55.762237&z=17.65"
               >
-                Посмотреть на карте
+                Открыть карту
               </a>
             </div>
           </div>

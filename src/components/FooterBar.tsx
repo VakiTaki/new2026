@@ -5,7 +5,7 @@ export function FooterBar() {
   return (
     <footer>
       <div className="section-header" style={{ marginBottom: 0 }}>
-        <p
+        {/* <p
           style={{
             margin: 0,
             color: "#f7fbff",
@@ -15,7 +15,7 @@ export function FooterBar() {
           }}
         >
           Готовы к встрече 25 декабря? Увидимся в Lambic Collection!
-        </p>
+        </p> */}
         <a
           className="btn ghost"
           href="#top"

@@ -171,19 +171,31 @@ export default function Registration() {
     }
   };
 
-  useEffect(() => {
-    if (user && user.completed) {
-      scrollToId("registration");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user && user.completed) {
+  //     scrollToId("registration");
+  //   }
+  // }, [user]);
 
   return (
     <section id="registration" className="registration">
       <div className="section-header">
         <h2 className="section-title">Предварительная регистрация</h2>
+
         {/* <span className="badge">Доступ по персональной ссылке</span> */}
       </div>
-
+      <p
+        style={{
+          margin: 0,
+          color: "#f7fbff",
+          fontSize: "30px",
+          fontWeight: "bolder",
+          fontFamily: "var(--font-serif)",
+          textAlign: "center",
+        }}
+      >
+        Готовы к встрече 25 декабря? Увидимся в Lambic Collection!
+      </p>
       <div className="registration__layout card ">
         {loading && (
           <div className="registration__spinner">

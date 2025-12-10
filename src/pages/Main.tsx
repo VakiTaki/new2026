@@ -14,7 +14,7 @@ export default function Main() {
       <main>
         <Venue />
         <Timeline />
-        <GallerySection />
+        {/* <GallerySection /> */}
         <MapBlock />
         <Registration />
       </main>

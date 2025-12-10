@@ -11,7 +11,8 @@ export function Timeline() {
       <div className="timeline">
         {schedule.map((item) => (
           <div key={item.time} className="card timeline-item">
-            <h3>{item.time}</h3>
+            <h2 style={{ textAlign: "center" }}>{item.time}</h2>
+            <h2>{item.header}</h2>
             <p>{item.desc}</p>
           </div>
         ))}
