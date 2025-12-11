@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { EVENT_TIMESTAMP } from '../data/content';
+import React, { useEffect, useState } from "react";
+import { EVENT_TIMESTAMP } from "../data/content";
 
 type TimeLeft = {
   done: boolean;
@@ -38,9 +38,11 @@ export function Countdown() {
 
   if (time.done) {
     return (
-      <div className="card" style={{ background: 'rgba(22, 37, 52, 0.75)' }}>
+      <div className="card">
         <h3>Вечер начинается прямо сейчас</h3>
-        <p style={{ margin: 0, color: '#fdf7ec' }}>Отсчёт завершён — встречаемся в Lambic Collection!</p>
+        <p style={{ margin: 0, color: "#fdf7ec" }}>
+          Отсчёт завершён — встречаемся в Lambic Collection!
+        </p>
       </div>
     );
   }
@@ -48,13 +50,13 @@ export function Countdown() {
   return (
     <div className="countdown" aria-label="Обратный отсчёт до события">
       {[
-        { label: 'Дней', value: time.days },
-        { label: 'Часов', value: time.hours },
-        { label: 'Минут', value: time.minutes },
-        { label: 'Секунд', value: time.seconds },
+        { label: "Дней", value: time.days },
+        { label: "Часов", value: time.hours },
+        { label: "Минут", value: time.minutes },
+        { label: "Секунд", value: time.seconds },
       ].map((item) => (
         <div key={item.label} className="countdown-tile">
-          <strong>{String(item.value).padStart(2, '0')}</strong>
+          <strong>{String(item.value).padStart(2, "0")}</strong>
           <span className="countdown-label">{item.label}</span>
         </div>
       ))}

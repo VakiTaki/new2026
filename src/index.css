@@ -215,6 +215,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   border-color: rgba(255, 255, 255, 0.4);
   color: #ffffff;
   background: rgba(0, 0, 0, 0.6);
@@ -223,6 +224,11 @@ h1 {
 .btn.ghost:hover {
   border-color: rgba(255, 255, 255, 0.6);
   background: rgba(0, 0, 0, 0.8);
+}
+
+.btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 0px;
 }
 
 section {
@@ -271,7 +277,7 @@ section {
     rgba(11, 26, 42, 0.28),
     rgba(82, 8, 18, 0.28)
   ); */
-  border: ;
+  /* border: ; */
   pointer-events: none;
   z-index: 0;
 }
@@ -437,7 +443,7 @@ ul.list li::before {
 
 .map__frame.has-map {
   aspect-ratio: 4 / 3;
-  background: url("/assets/map.png") center/cover no-repeat, #0d1826;
+  background: url("/assets/map.jpg") center/cover no-repeat, #0d1826;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 

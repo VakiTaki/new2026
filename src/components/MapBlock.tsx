@@ -27,33 +27,29 @@ export function MapBlock() {
               marginTop: "30px",
             }}
           >
-            <div
-              className="pill pill-mobile"
-              style={{ marginTop: "12px", cursor: "pointer" }}
-            >
+            <div className="pill-mobile" style={{ marginTop: "12px" }}>
               {/* <span className="dot" aria-hidden="true" /> */}
-              <Map />
-              <span
+
+              <button
+                className="btn ghost"
                 onClick={() => {
                   window.location.href =
                     "yandexmaps://maps.yandex.ru/?pt=37.557816,55.762237&z=17&l=map";
                 }}
               >
+                <Map />
                 Открыть в приложении
-              </span>
+              </button>
             </div>
-            <div
-              className="pill pill-desktop"
-              style={{ marginTop: "12px", cursor: "pointer" }}
-            >
+            <div className="pill-desktop" style={{ marginTop: "12px" }}>
               {/* <span className="dot" aria-hidden="true" /> */}
-              <Map />
 
               <a
+                className="btn ghost"
                 target="_blank"
                 href="https://yandex.ru/maps/org/lambic_collection/68448441158/?indoorLevel=1&ll=37.557816%2C55.762237&z=17.65"
               >
-                Открыть карту
+                <Map /> Открыть карту
               </a>
             </div>
           </div>
