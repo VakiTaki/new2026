@@ -23,7 +23,7 @@ export const galleryItems = [
 
 export const schedule = [
   {
-    time: "17:00",
+    time: "17:30",
     header: "Регистрация",
     desc: "Спускаемся на первый этаж бизнес-центра в ресторан Lambic Collection, где гостей встретят welcome-drinks и холодные закуски.",
   },
@@ -33,7 +33,7 @@ export const schedule = [
     desc: "Подводим итоги года, благодарим коллег и  делимся планами на 2026.",
   },
   {
-    time: "19:30",
+    time: "19:00",
     header: "Живое выступление",
     desc: "Начало программы кавер-группы Trigger.",
   },

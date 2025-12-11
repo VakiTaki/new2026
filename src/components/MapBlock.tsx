@@ -32,6 +32,7 @@ export function MapBlock() {
 
               <button
                 className="btn ghost"
+                style={{ width: "100%" }}
                 onClick={() => {
                   window.location.href =
                     "yandexmaps://maps.yandex.ru/?pt=37.557816,55.762237&z=17&l=map";

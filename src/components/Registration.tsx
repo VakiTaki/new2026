@@ -188,10 +188,11 @@ export default function Registration() {
         style={{
           margin: 0,
           color: "#f7fbff",
-          fontSize: "30px",
+          fontSize: "24px",
           fontWeight: "bolder",
-          fontFamily: "var(--font-serif)",
+          // fontFamily: "var(--font-serif)",
           textAlign: "center",
+          marginBottom: "18px",
         }}
       >
         Готовы к встрече 25 декабря? Увидимся в Lambic Collection!
